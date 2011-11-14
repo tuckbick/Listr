@@ -1,1 +1,1 @@
-web: node publish/app.js
+web: node app.js
