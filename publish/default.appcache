@@ -1,0 +1,24 @@
+CACHE MANIFEST
+
+# version 2011-11-13 21:47:05
+
+CACHE:
+# html files
+views/layout.tpl
+
+
+# css files
+public/css/d8ee8cc.css
+
+
+
+# js files
+public/js/b4aa3ce.js
+public/js/libs/respond.min.js
+
+
+
+FALLBACK:
+
+NETWORK:
+*
