@@ -3,10 +3,9 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "node": ">= 0.6.0",
       "express": "2.4.7"
     , "socket.io": ">= 0.8.0"
-	, "jqtpl": ">= 1.0.7"
-	, "mongoose": ">= 2.3.13"
+    , "jqtpl": ">= 1.0.7"
+    , "mongoose": "2.3.13"
   }
 }
