@@ -1,0 +1,106 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 http://blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title>${title}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
+
+  <!--<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  <link rel="apple-touch-startup-image" href="img/l/splash.png">-->
+
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+
+  	<!-- home page -->
+	<div data-role="page" id="home" class="type-interior">
+    <div data-role="footer" data-theme="a" class="ui-bar ui-grid-c">
+      <div class="ui-block-a"><h3 style="margin-top:10px;">Settings</h3></div>
+      <div class="ui-block-b"><label for="value" style="margin:8px 10px 0 0; text-align:right;">Price</label> </div>
+      <div class="ui-block-c"><input id="value" value="5,000"></div>   
+      <div class="ui-block-d"><div style="margin:6px 0 0 10px;"><button type="submit" data-theme="b">Update</button></div></div>
+    </div>
+<!-- 		<div data-role="header" role="contentinfo">
+      <h1>Testing</h1> -->
+<!--             <div class="ui-block-a title">Listr</div>
+      <div class="ui-block-bcd">
+        <form action="/item" method="put">
+          
+        </form>
+      </div>  -->
+		<!-- </div> -->
+		<div data-role="content" id="item-app">
+			<fieldset data-role="controlgroup" id="item-list">
+				<legend>List</legend>
+				<!-- <input type="checkbox" name="checkbox-1a" id="checkbox-1a" />
+				<label for="checkbox-1a">Cheetos</label>
+
+				<input type="checkbox" name="checkbox-2a" id="checkbox-2a" />
+				<label for="checkbox-2a">Doritos</label>
+
+				<input type="checkbox" name="checkbox-3a" id="checkbox-3a"  checked disabled/>
+				<label for="checkbox-3a">Fritos</label>
+
+				<input type="checkbox" name="checkbox-4a" id="checkbox-4a"  checked disabled/>
+				<label for="checkbox-4a">Sun Chips</label> -->
+		    </fieldset>
+		</div>
+	</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via ant build script -->
+  <script src="js/mylibs/helper.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+  <script>window.JSON || document.write('<script src="js/libs/json2.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.1/underscore-min.js"></script>
+  <script>window._ || document.write('<script src="js/libs/underscore-1.1.6.js"><\/script>')</script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>-->
+  <script>window.Backbone || document.write('<script src="js/libs/backbone.js"><\/script>')</script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/mylibs/backbone-socketio.js"></script>
+  <script src="js/bbapp.js"></script>
+  <script src="//code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+  <script>window.$.mobile || document.write('<script src="js/libs/jquery.mobile-1.0.min.js"><\/script>')</script>
+  <!-- end concatenated and minified scripts-->
+
+  <script>
+    MBP.scaleFix();
+  </script>
+
+  <script id="item-template" type="text/template">
+	<input type="checkbox" name="<%= _id %>" id="<%= _id %>" />
+	<label for="<%= _id %>"><%= content %></label>
+  </script>
+
+  <script>
+    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+
+</body>
+</html>

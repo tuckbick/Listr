@@ -1,0 +1,13 @@
+<div data-role="page" id="home">
+	<div data-role="header" id="toolbar" data-position="fixed">
+		<h1>Listr</h1>
+		<a href="#new" data-ajax="false" data-icon="plus" data-rel="dialog" data-transition="fade" class="ui-btn-right">New</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" id="item-list"></ul>
+	</div>
+</div>
+
+<script id="item-template" type="text/template">
+  <%= content %>
+</script>
